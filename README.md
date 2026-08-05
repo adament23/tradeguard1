@@ -25,6 +25,8 @@ The dashboard dynamically calculates:
 - Largest Winning Trade
 - Largest Losing Trade
 
+All calculations are derived from trade data and are not hardcoded.
+
 ---
 
 # Additional Feature
@@ -60,7 +62,7 @@ Make sure you have installed:
 Clone the repository:
 
 ```bash
-git clone <your-github-repository-url>
+git clone https://github.com/adament23/tradeguard1.git
 ```
 
 Navigate to the project folder:
@@ -95,31 +97,34 @@ npm run build
 
 ---
 
-# Product Questions
+# Tech Stack
 
-## 1. What is drawdown in trading?
+## Frontend
 
-Drawdown is the reduction in an account balance from its highest point to a lower point.
+- **React** - Used to build reusable dashboard components and manage the user interface.
+- **TypeScript** - Used for type safety and better code maintainability.
+- **Vite** - Used as the development build tool for fast development and optimized builds.
+- **Tailwind CSS** - Used for responsive styling and UI design.
+- **shadcn/ui** - Used for reusable UI components such as cards, tables, badges, and progress indicators.
 
-It represents the amount of money lost during a decline and helps measure the risk level of a trading account.
+## Data Visualization
+
+- **Recharts** - Used to create the Equity Curve visualization and display account performance over time.
+
+## Table Management
+
+- **TanStack React Table** - Used to build the sortable and filterable trade history table.
+
+## Icons
+
+- **Lucide React** - Used for dashboard icons and visual indicators.
+
+## Development Approach
+
+- Built reusable React components for different dashboard sections.
+- Created separate utility functions for trading calculations and risk calculations.
+- Used mock trade data as requested.
+- Implemented responsive design for different screen sizes.
+- Ensured calculated values are derived dynamically instead of hardcoded.
 
 ---
-
-## 2. Why do you think a trader would care about their remaining drawdown rather than just their current P&L?
-
-Current P&L only shows the current profit or loss, but remaining drawdown shows how much additional loss the trader can take before breaking account rules.
-
-For evaluation and funded trading accounts, managing risk limits is as important as making profits.
-
----
-
-## 3. If you had another day to work on this dashboard, what would you improve?
-
-I would improve the dashboard by adding:
-
-- Real-time trading data integration
-- More advanced performance analytics
-- Risk alerts and notifications
-- Performance breakdown by asset
-- Best and worst trading days
-- Multiple account support
