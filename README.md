@@ -10,9 +10,10 @@ The dashboard calculates trading performance and risk metrics dynamically from t
 
 Check out the live application:
 
-🌐  https://tradeguard1-xi.vercel.app/
+🌐 https://tradeguard1-xi.vercel.app/
 
 ---
+
 # What I Built
 
 I built a Trader Risk Dashboard that allows traders to monitor:
@@ -31,8 +32,43 @@ The dashboard dynamically calculates:
 - Win Rate
 - Largest Winning Trade
 - Largest Losing Trade
+- Maximum Drawdown
+- Daily Loss Limit Usage
+- Risk Usage Percentage
 
 All calculations are derived from trade data and are not hardcoded.
+
+---
+
+# Features
+
+## Account Overview
+
+- Starting balance tracking
+- Current account balance
+- Total profit and loss
+- Maximum drawdown monitoring
+
+## Performance Metrics
+
+- Winning trades count
+- Losing trades count
+- Win rate calculation
+- Largest winning trade
+- Largest losing trade
+
+## Risk Monitor
+
+- Maximum drawdown usage
+- Remaining drawdown
+- Daily loss limit tracking
+- Risk usage percentage
+- Account risk status
+
+## Trade History
+
+- Displays executed trades
+- Shows asset, trade type, entry price, exit price, and P&L
 
 ---
 
@@ -70,68 +106,3 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/adament23/tradeguard1.git
-```
-
-Navigate to the project folder:
-
-```bash
-cd tradeguard1
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Open the application:
-
-```
-http://localhost:5173
-```
-
-To create a production build:
-
-```bash
-npm run build
-```
-
----
-
-# Tech Stack
-
-## Frontend
-
-- **React** - Used to build reusable dashboard components and manage the user interface.
-- **TypeScript** - Used for type safety and better code maintainability.
-- **Vite** - Used as the development build tool for fast development and optimized builds.
-- **Tailwind CSS** - Used for responsive styling and UI design.
-- **shadcn/ui** - Used for reusable UI components such as cards, tables, badges, and progress indicators.
-
-## Data Visualization
-
-- **Recharts** - Used to create the Equity Curve visualization and display account performance over time.
-
-## Table Management
-
-- **TanStack React Table** - Used to build the sortable and filterable trade history table.
-
-## Icons
-
-- **Lucide React** - Used for dashboard icons and visual indicators.
-
-## Development Approach
-
-- Built reusable React components for different dashboard sections.
-- Created separate utility functions for trading calculations and risk calculations.
-- Used mock trade data as requested.
-- Implemented responsive design for different screen sizes.
-- Ensured calculated values are derived dynamically instead of hardcoded.
-
----
