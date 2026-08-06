@@ -7,11 +7,12 @@ import {
 } from "lucide-react";
 
 import {
-  Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+import { DashboardCard } from "@/components/dashboard/dashboard-card";
 
 import { Badge } from "@/components/ui/badge";
 
@@ -154,17 +155,9 @@ export default function TradingStats({
 
           return (
 
-            <Card
-              key={card.title}
-              className="
-                group
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:shadow-xl
-              "
+            <DashboardCard
+           key={card.title}
             >
-
 
               <CardHeader
                 className="
@@ -224,7 +217,7 @@ export default function TradingStats({
               </CardContent>
 
 
-            </Card>
+            </DashboardCard>
 
           );
 

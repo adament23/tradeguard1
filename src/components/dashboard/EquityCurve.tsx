@@ -1,9 +1,10 @@
 import {
-  Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+import { DashboardCard } from "@/components/dashboard/dashboard-card";
 
 import { Badge } from "@/components/ui/badge";
 
@@ -194,14 +195,7 @@ export default function EquityCurve({
 
   return (
 
-    <Card
-      className="
-        rounded-2xl
-        border
-        shadow-sm
-      "
-    >
-
+    <DashboardCard className="rounded-2xl">
 
       <CardHeader>
 
@@ -411,7 +405,7 @@ export default function EquityCurve({
       </CardContent>
 
 
-    </Card>
+    </DashboardCard>
 
   );
 }

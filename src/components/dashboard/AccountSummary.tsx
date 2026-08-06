@@ -8,13 +8,14 @@ import {
 } from "lucide-react";
 
 import {
-  Card,
+  
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
 import { Badge } from "@/components/ui/badge";
+import { DashboardCard } from "./dashboard-card";
 
 
 interface AccountSummaryProps {
@@ -141,18 +142,7 @@ export default function AccountSummary({
 
           return (
 
-            <Card
-              key={card.title}
-              className="
-                group
-                relative
-                overflow-hidden
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:shadow-xl
-              "
-            >
+            <DashboardCard key={card.title}>
 
               <div
                 className="
@@ -209,7 +199,7 @@ export default function AccountSummary({
               </CardContent>
 
 
-            </Card>
+            </DashboardCard>
 
           );
 
