@@ -6,6 +6,13 @@ The dashboard calculates trading performance and risk metrics dynamically from t
 
 ---
 
+# 🚀 Live Demo
+
+Check out the live application:
+
+🌐  https://tradeguard1-xi.vercel.app/
+
+---
 # What I Built
 
 I built a Trader Risk Dashboard that allows traders to monitor:
