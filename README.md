@@ -135,3 +135,17 @@ npm run build
 - Ensured calculated values are derived dynamically instead of hardcoded.
 
 ---
+
+# Product Questions
+
+## 1. What is drawdown in trading?
+
+Drawdown is the decrease in a trader's account balance from its highest point (peak equity) to the lowest point before recovering. It represents the amount of loss a trader experiences from their maximum account value. Maximum drawdown is an important risk metric because it helps measure the downside risk of a trading strategy.
+
+## 2. Why do you think a trader would care about their remaining drawdown rather than just their current P&L?
+
+A trader cares about remaining drawdown because it shows how much loss capacity is still available before reaching their maximum allowed risk limit. Current P&L only shows the current profit or loss, while remaining drawdown helps traders understand their risk position and avoid violating account rules.
+
+## 3. If you had another day to work on this dashboard, what would you improve?
+
+If I had another day to work on this dashboard, I would add real-time trade updates, interactive date filters, more advanced performance analytics, automated risk alerts, and backend integration for storing and managing live trading data.
