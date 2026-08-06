@@ -28,13 +28,14 @@ export default function App() {
     largestLoss,
 
 
-    currentDrawdown,
+    maximumDrawdown,
     remainingDrawdown,
 
     currentDayLoss,
     remainingDailyLoss,
 
   } = useDashboardData();
+
 
 
 
@@ -71,6 +72,7 @@ export default function App() {
 
 
 
+
         <TradingStats
 
           winningTrades={
@@ -97,10 +99,12 @@ export default function App() {
 
 
 
+
+
         <RiskIndicator
 
-          currentDrawdown={
-            currentDrawdown
+          maximumDrawdownUsed={
+            maximumDrawdown
           }
 
           remainingDrawdown={
@@ -127,6 +131,8 @@ export default function App() {
 
 
 
+
+
         <EquityCurve
 
           startingBalance={
@@ -138,6 +144,8 @@ export default function App() {
           }
 
         />
+
+
 
 
 

@@ -56,6 +56,45 @@ export function getCurrentDrawdown(
 
 
 
+// ADD THIS FUNCTION HERE 👇
+
+export function getMaximumDrawdown(
+  startingBalance: number,
+  trades: Trade[]
+) {
+  const equityCurve = getEquityCurve(
+    startingBalance,
+    trades
+  );
+
+
+  let peak = startingBalance;
+  let maxDrawdown = 0;
+
+
+  equityCurve.forEach((point) => {
+
+    if (point.balance > peak) {
+      peak = point.balance;
+    }
+
+
+    const drawdown =
+      peak - point.balance;
+
+
+    if (drawdown > maxDrawdown) {
+      maxDrawdown = drawdown;
+    }
+
+  });
+
+
+  return maxDrawdown;
+}
+
+
+
 export function getRemainingDrawdown(
   maxDrawdown: number,
   currentDrawdown: number

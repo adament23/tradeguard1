@@ -5,6 +5,7 @@ import { calculateTradingStats } from "@/lib/trading-calculations";
 
 import {
   getCurrentDrawdown,
+  getMaximumDrawdown,
   getRemainingDrawdown,
   getCurrentDayLoss,
   getRemainingDailyLoss,
@@ -12,7 +13,9 @@ import {
 } from "@/lib/risk-calculations";
 
 
+
 export function useDashboardData() {
+
 
   const stats =
     calculateTradingStats(trades);
@@ -33,19 +36,35 @@ export function useDashboardData() {
 
 
 
-  const remainingDrawdown =
-    getRemainingDrawdown(
-      accountData.maxDrawdown,
-      currentDrawdown
+  const maximumDrawdown =
+    getMaximumDrawdown(
+      accountData.startingBalance,
+      trades
     );
 
 
 
+  const remainingDrawdown =
+    getRemainingDrawdown(
+      accountData.maxDrawdown,
+      maximumDrawdown
+    );
+
+
+
+  // Automatically gets latest trading day
   const today =
-    "2026-08-04";
+    trades.reduce(
+      (latest, trade) =>
+        trade.date > latest
+          ? trade.date
+          : latest,
+      ""
+    );
 
 
 
+  // Calculates only that day's loss
   const currentDayLoss =
     getCurrentDayLoss(
       trades,
@@ -85,10 +104,15 @@ export function useDashboardData() {
 
     currentDrawdown,
 
+
+    maximumDrawdown,
+
+
     remainingDrawdown,
 
 
     currentDayLoss,
+
 
     remainingDailyLoss,
 
